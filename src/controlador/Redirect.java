@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class OpenPostForm
+ * Servlet implementation class Redirect
  */
-@WebServlet("/OpenPostForm")
-public class OpenPostForm extends HttpServlet {
+@WebServlet("/redirect")
+public class Redirect extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public OpenPostForm() {
+    public Redirect() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,16 +26,14 @@ public class OpenPostForm extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("error", "");
-		request.getRequestDispatcher("postform.jsp").forward(request, response);
+		response.sendRedirect("index");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
 	}
 
 }

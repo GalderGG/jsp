@@ -13,14 +13,14 @@
 </head>
 <body>
 	<h1>Hello, world!</h1>
-
+	<p style="color:red"><%=request.getAttribute("error") %></p>
 	<form action="receiver" method="POST">
-	Nombre:
-	<input type="text" id="nombre" name="nombre" value="">
+	Usuario:
+	<input type="text" id="nombre" name="user" value="">
 	<br>
 	<br>
-	Apellido:
-	<input type="text" id="apellido" name="apellido" value="">
+	Contraseña:
+	<input type="password" id="apellido" name="password" value="">
 	<br>
 	<br>
 	<input type="submit" value="Enviar">
